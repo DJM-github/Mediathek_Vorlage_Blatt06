@@ -99,13 +99,10 @@ public class VerleihServiceImpl extends AbstractObservableService implements
      */
     private HashMap<Medium, LinkedList<Vormerkkarte>> erzeugeVormerkkartenBestand()
     {
-        LinkedList<Vormerkkarte> Liste = new LinkedList<Vormerkkarte>();
-        
         HashMap<Medium, LinkedList<Vormerkkarte>> result = new HashMap<Medium, LinkedList<Vormerkkarte>>();
-        
         for (Medium medium : _medienbestand.getMedien())
         {
-            
+        	LinkedList<Vormerkkarte> Liste = new LinkedList<Vormerkkarte>();
             result.put(medium, Liste);
         }
         return result;
